@@ -10,8 +10,26 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
-  }
+}
   
-  .contact-container:hover {
+.contact-container:hover {
     transform: scale(1.05);
-  }
+}
+
+.picture-container {
+    size: 180px;
+}
+
+.button-container {
+  margin-right: 60px;
+  margin-left: 60px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 29px;
+
+}
+
+
+  

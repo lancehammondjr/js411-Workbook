@@ -3,13 +3,14 @@ import './contact.styles.css'
 
 
 export const Contact = props => (
+
     <div className='contact-container' >
-        <img 
+        <img className="picture-container"
         alt="theuser"
-        src={props.theuser.picture.thumbnail}
+        src={props.theuser.picture.large}
         />
-        <h2>{props.theuser.name}</h2>
+        <h2>{props.theuser.name.first} {props.theuser.name.last}</h2>
         <p> {props.theuser.email} </p>
-    </div>;
-    console.log(props.theuser.results)
+        <button className='button-container' >Hide Info</button>
+    </div>
 );

@@ -7,28 +7,27 @@ class App extends Component {
     super();
 
     this.state = {
-      userlist: [],
-      loading: false
+      userlist: []
     };
-  };
+  }
 
   componentDidMount() {
     fetch("https://randomuser.me/api/?results=25")
       .then(res => res.json())
-      .then(res => {this.setState({ 
-        userlist: res.results,
-        loading: true
-      })
-      });
+      .then(data => this.setState({ 
+        userlist: data.results
+      }))
+      .catch(error => console.log(`Error: ${error}`))
+  }
 
-    render(){
-      return (
-        <div className="App">
-
-        <ContactList userlist={this.state.userlist}/>
-        </div>
-      );
-    };
+  render(){
+    return (
+      <div className="App">
+      <h1>Contact List</h1>
+      <ContactList userlist={this.state.userlist}/>
+    
+      </div>
+    );
   }
 }
 
